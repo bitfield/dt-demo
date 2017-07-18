@@ -1,7 +1,8 @@
 # Configure a sensible version of Vim
 class profile::vim {
-  ensure_packages([ 'vim-enhanced',
-                    'ack'])
+  require epel
+
+  ensure_packages(['ack', 'vim-enhanced'])
 
   file { '/bin/vi':
     ensure => link,
