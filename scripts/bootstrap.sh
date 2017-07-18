@@ -8,12 +8,9 @@ if [ "$#" -ne 3 ]; then
 fi
 hostname ${HOSTNAME}
 echo ${HOSTNAME} >/etc/hostname
-source /etc/lsb-release
-apt-key adv --fetch-keys http://apt.puppetlabs.com/DEB-GPG-KEY-puppet
 wget http://apt.puppetlabs.com/puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
-dpkg -i puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
-apt-get update
-apt-get -y install git puppet-agent
+rpm -Uvh https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.rpm
+yum install -y git puppet-agent
 cd /etc/puppetlabs/code/environments
 mv production production.orig
 git clone ${PUPPET_REPO} production
