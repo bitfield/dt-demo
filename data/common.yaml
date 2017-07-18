@@ -25,3 +25,4 @@
     - profile::sudoers
     - profile::timezone
     - profile::users
+    - profile::vim
