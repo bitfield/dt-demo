@@ -5,19 +5,17 @@
       uid: '1010'
       sshkeys:
         - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEA3ATqENg+GWACa2BzeqTdGnJhNoBer8x6pfWkzNzeM8Zx7/2Tf2pl7kHdbsiTXEUawqzXZQtZzt/j3Oya+PZjcRpWNRzprSmd2UxEEPTqDw9LqY5S2B8og/NyzWaIYPsKoatcgC7VgYHplcTbzEhGu8BsoEVBGYu3IRy5RkAcZik= john@susie'
-    'bridget':
-      comment: 'Bridget X. Zample'
-      uid: '1011'
+    'chris':
+      comment: 'Chris Goulet'
+      uid: '1021'
       sshkeys:
-        - 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiTvHgzkf9TGBIpnIUBRbsWaRNBqzrLY/OoQpzqprGFLuTzzb8MaGI9Q6GPIhil5HyXE7PWPyuwcBA4mJhIHBXWqQC5o59cdtrkgJwAybSK7z5oVt67B0qieDG/cbasxr52nMAJC3dBEF4W1s69VSq5+wLFD01iW= bridget'
+        - 'ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvcddBTRSg23oHr23nsBWt4W1Oa4MQc5l5iy5icMAma+aACoYbHvtxMo5DVcQWtXDTn9NUqVPA2qCJYUASLv4mzEqB/wRI/tnCmNXelMmXI4svSrtOCMSEdI6n8fmrD1fl+UQMxtcijMCfHUfAo6v9SDOkJ3RhM1E7FjbFqhi7S9p2q1b2lpxljMsq58LAUdwSuxIpBUSga7daf4eh+h9rxr3pXnUfW768T4inWYNQ0MbO2g6/AUYHv/msk1M8VeGR3vfodnLH6uw/2+zRhP55Gn475pqr7hfPM4tGXhbdcTF6QnsoFO+Gzs0Z/Arizia95jGCH3MJMa3LK/F49REpQ=='
   allow_users:
     - 'john'
-    - 'bridget'
-    - 'ubuntu'
+    - 'cgoulet'
   sudoers:
     - 'john'
-    - 'bridget'
-    - 'ubuntu'
+    - 'cgoulet'
   classes:
     - profile::ntp
     - profile::puppet
