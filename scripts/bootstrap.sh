@@ -8,7 +8,6 @@ if [ "$#" -ne 3 ]; then
 fi
 hostname ${HOSTNAME}
 echo ${HOSTNAME} >/etc/hostname
-wget http://apt.puppetlabs.com/puppetlabs-release-pc1-${DISTRIB_CODENAME}.deb
 rpm -Uvh https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.rpm
 yum install -y git puppet-agent
 cd /etc/puppetlabs/code/environments
