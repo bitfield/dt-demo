@@ -1,8 +1,9 @@
 #!/bin/bash
 PUPPET_REPO=$1
 BRANCH=$2
-if [ "$#" -ne 3 ]; then
+if [ "$#" -lt 2 ]; then
   echo "Usage: $0 PUPPET_REPO BRANCH"
+  echo "Called with: $*"
   exit 1
 fi
 rpm -Uvh https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.rpm
