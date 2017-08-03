@@ -1,13 +1,10 @@
 #!/bin/bash
 PUPPET_REPO=$1
-HOSTNAME=$2
-BRANCH=$3
+BRANCH=$2
 if [ "$#" -ne 3 ]; then
-  echo "Usage: $0 PUPPET_REPO HOSTNAME BRANCH"
+  echo "Usage: $0 PUPPET_REPO BRANCH"
   exit 1
 fi
-hostname ${HOSTNAME}
-echo ${HOSTNAME} >/etc/hostname
 rpm -Uvh https://yum.puppetlabs.com/puppet/puppet-release-el-7.noarch.rpm
 yum install -y git puppet-agent
 cd /etc/puppetlabs/code/environments
