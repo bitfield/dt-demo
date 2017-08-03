@@ -1,6 +1,6 @@
 #!/bin/bash
 PUPPET_REPO="https://github.com/bitfield/dt-demo.git"
-if [ "$#" -lt 2 ]; then
+if [ "$#" -lt 1 ]; then
   cat <<USAGE
 Usage: $0 TARGET [BRANCH]
 Install Puppet on the node TARGET (IP address or DNS name) and run 
