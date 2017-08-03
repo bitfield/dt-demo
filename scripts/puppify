@@ -15,5 +15,5 @@ echo -n "Copying bootstrap script... "
 scp ${OPTIONS} $(dirname $0)/bootstrap.sh ${TARGET}:/tmp
 echo "done."
 echo -n "Bootstrapping... "
-ssh ${OPTIONS} ${TARGET} "sudo bash /tmp/bootstrap.sh ${PUPPET_REPO} ${BRANCH}"
+ssh ${OPTIONS} -t ${TARGET} "sudo bash /tmp/bootstrap.sh ${PUPPET_REPO} ${BRANCH}"
 echo "done."
