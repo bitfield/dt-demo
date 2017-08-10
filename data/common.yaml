@@ -1,5 +1,4 @@
 ---
   classes:
     - profile::puppet
-    - profile::timezone
     - profile::vim
