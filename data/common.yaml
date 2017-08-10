@@ -3,3 +3,4 @@
     - profile::puppet
     - profile::timezone
     - profile::vim
+  greeting: "Hello from %{facts.hostname} "

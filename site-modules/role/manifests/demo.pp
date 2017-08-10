@@ -10,12 +10,13 @@ class role::demo {
   }
 
   file { '/var/docker/dora/greeting':
-    content => "Hello from ${facts['hostname']}\n",
+    content => lookup('greeting', String),
+    notify  => Docker::Run['dora'],
   }
 
   docker::run { 'dora':
     image   => 'bitfield/dora',
     volumes => '/var/docker/dora/greeting:/etc/config/greeting',
-    ports   => ['9090'],
+    ports   => ['9090:9090'],
   }
 }
