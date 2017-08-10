@@ -1,5 +1,7 @@
 # Be the demo node
 class role::demo {
+  include docker
+
   file { [
     '/var/docker',
     '/var/docker/dora',
