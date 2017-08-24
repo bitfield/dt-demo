@@ -1,4 +1,8 @@
 ---
-  classes:
-    - profile::puppet
-    - profile::vim
+classes:
+  - profile::puppet
+  - profile::vim
+puppetdb::ssl_cert_path: '/etc/ssl/certs/puppetdb.crt'
+puppetdb::ssl_ca_cert_path: '/etc/ssl/certs/puppetdb.crt'
+puppetdb::ssl_key_path: '/etc/ssl/certs/puppetdb.key'
+puppetdb::disable_ssl: true
